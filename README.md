@@ -1,18 +1,56 @@
-## Getting Started
+# SariTrack
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+**Java Foundations Final Project**
 
-## Folder Structure
+Submitted by: [Names of group members]
 
-The workspace contains two folders by default, where:
+SariTrack is a console-based Java application, a Sari-Sari Store Inventory System, that helps a small neighborhood store owner manage products and sales. The owner can view the inventory, add new products, sell items, restock items that are running low, and check the total sales earned. The program automatically warns the user when a product's stock is low.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Features
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- View the inventory with **[LOW STOCK!]** alerts
+- Add a new product
+- Sell a product (stock is checked before the sale)
+- Restock a product
+- View total sales
+- Input validation: the program does not crash on wrong input
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Classes
 
-## Dependency Management
+| Class | Fields | Methods |
+|---|---|---|
+| `Product` | `name`, `price`, `stock` | `sell()`, `restock()`, `isLowStock()` |
+| `Store` | `storeName`, `products` (ArrayList), `totalSales` | `addProduct()`, `showInventory()`, `findProduct()`, `sellProduct()` |
+| `Main` | Test class and menu | Handles user input and calls the other classes |
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## How to Run
+
+1. Install JDK 17 or later.
+2. Clone or download this repository.
+3. Open the folder in VS Code and run `src/Main.java`.
+
+Or using the terminal:
+
+```
+cd src
+javac *.java
+java Main
+```
+
+## Project Structure
+
+```
+SARIPROJECT/
+├── docs/
+│   └── SariTrack.docx
+├── src/
+│   ├── Main.java
+│   ├── Product.java
+│   └── Store.java
+└── README.md
+```
+
+## Technologies
+
+- Java (JDK 17 or later)
+- Visual Studio Code
