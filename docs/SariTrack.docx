@@ -1,0 +1,45 @@
+SariTrack
+Java Foundations Final Project
+Submitted by: [Names of group members]
+Date: [D ko pa lalagyan kayo na maglagay hahaha]
+
+Overview
+SariTrack is a console-based Java application, a Sari-Sari Store Inventory System, that helps a small neighborhood store owner manage products and sales. The owner can view the inventory, add new products, sell items, restock items that are running low, and check the total sales earned. The program automatically warns the user when a product's stock is low.
+The program was designed to demonstrate foundational Java programming concepts: classes and objects, encapsulation, fields and methods, ArrayList, loops, conditionals, and user input handling that does not crash.
+
+Classes
+Product
+Represents a single item sold in the store.
+• Fields: name, price, stock
+• Methods: sell(int qty) reduces the stock after a sale and rejects invalid or excessive quantities; restock(int qty) adds to the stock; isLowStock() checks if the remaining stock is 5 or below.
+
+Store
+Represents the store and manages the collection of products.
+• Fields: storeName, products (an ArrayList of Product objects), totalSales
+• Methods: addProduct(Product p) adds a new product to the list; showInventory() displays all products with low-stock alerts; findProduct(String name) searches for a product by name, ignoring uppercase and lowercase; sellProduct(String name, int qty) processes a sale and updates the total sales.
+
+Main (Test Class)
+The driver of the program. It displays the menu, reads the user's choices, and calls the methods of the Store and Product classes.
+Requirements Checklist
+• At least 2 classes (excluding the test class): Product and Store
+• At least 2 fields and 2 methods in every class: Product has 3 fields and 3 methods; Store has 3 fields and 4 methods (not counting getters and setters)
+• Array or ArrayList: ArrayList<Product> inside the Store class
+• Accepts user input without crashing: All inputs are read through helper methods that use try-catch and a loop. Invalid input such as letters, empty values, or negative numbers shows an error message and asks again instead of crashing the program.
+
+How to Use
+1. Compile and run Main.java.
+2. Choose an option from the menu by typing its number:
+    ◦ 1 View inventory
+    ◦ 2 Add a product
+    ◦ 3 Sell a product
+    ◦ 4 Restock a product
+    ◦ 5 View total sales
+    ◦ 0 Exit
+3. Follow the on-screen prompts.
+
+Sample Run
+Choosing option 1 shows the list of products. Items with 5 or fewer pieces left are marked [LOW STOCK!]. Choosing option 3 and selling 2 pieces of a product priced at P15.00 displays a total of P30.00 and adds it to the total sales.
+
+Technologies We Used!
+• Java (JDK 17 or later)
+• Visual Studio Code
